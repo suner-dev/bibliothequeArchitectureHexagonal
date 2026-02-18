@@ -14,7 +14,6 @@ public class CreateBookService implements CreateBookUseCase {
 
     @Override
     public Book createBook(String title, String author, String isbn) {
-        // TODO
-        return null;
+
     }
 }

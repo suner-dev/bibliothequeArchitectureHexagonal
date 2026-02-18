@@ -16,13 +16,11 @@ public class GetBookService implements GetBookUseCase {
 
     @Override
     public Book getBookById(Long id) {
-        // TODO
-        return null;
+
     }
 
     @Override
     public List<Book> getAllBooks() {
-        // TODO
-        return null;
+
     }
 }

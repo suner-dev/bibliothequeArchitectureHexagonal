@@ -18,7 +18,6 @@ public class BorrowBookService implements BorrowBookUseCase {
 
     @Override
     public Loan borrowBook(Long bookId, Long memberId) {
-        // TODO
-        return null;
+
     }
 }

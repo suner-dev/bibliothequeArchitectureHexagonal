@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.Map;
 
+@Validated
 @RestController
 @RequestMapping("/api/loans")
 @RequiredArgsConstructor
@@ -20,7 +21,13 @@ public class LoanController {
     public ResponseEntity<Map<String, Object>> borrowBook(
             @PathVariable Long bookId,
             @Valid @RequestBody BorrowBookRequest request) {
-        // TODO
-        return null;
+
+        return ResponseEntity.status(HttpStatus.CREATED).body(LoanResponse);
+    }
+
+    @DeleteMapping("borrow/{bookId}")
+    public ResponseEntity<Void> deleteLoans(@PathVariable long bookId) {
+        LoanService.deleteLoan(bookId);
+        return ResponseEntity.ok().build();
     }
 }
